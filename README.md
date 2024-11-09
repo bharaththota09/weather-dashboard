@@ -53,6 +53,9 @@ Now app will be running at http://localhost:3000 and the JSON server backend wil
 - View and manage your favorite cities in the "Favorite Cities" section.
 - Remove a city from your favorites by clicking "Remove".
 
+## Demo
+A live demo of the React Weather App is available at [LINK TO LIVE DEMO](https://weather-dashboard-1-9ufx.onrender.com/).
+
 ## Credits
 - The weather app was created by [Bharath Thota](https://github.com/bharaththota09) as a  project for the Aviara Labs.
 - The app uses the OpenWeatherMap API to retrieve weather data.
