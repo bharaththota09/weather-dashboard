@@ -10,18 +10,18 @@ function FavoriteComponent({ setWeatherData, city }) {
   }, []);
 
   const fetchFavorites = async () => {
-    const response = await axios.get("http://localhost:5000/favorites");
+    const response = await axios.get("https://weather-dashboard-4mtz.onrender.com/favorites");
     setFavorites(response.data);
   };
 
   const addFavorite = async (city) => {
     if (!favorites.some((fav) => fav.city === city)) {
-      await axios.post("http://localhost:5000/favorites", { city });
+      await axios.post("https://weather-dashboard-4mtz.onrender.com/favorites", { city });
       fetchFavorites();
     }
   };
   const removeFavorite = async (id) => {
-    await axios.delete(`http://localhost:5000/favorites/${id}`);
+    await axios.delete(`https://weather-dashboard-4mtz.onrender.com/favorites/${id}`);
     fetchFavorites();
   };
 

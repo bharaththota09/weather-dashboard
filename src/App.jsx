@@ -1,5 +1,5 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React,{ useState, useEffect }  from "react";
+
 import SearchComponent from "./components/SearchComponent";
 import WeatherDisplayComponent from "./components/WeatherDisplayComponent";
 import FavoriteComponent from "./components/FavoriteComponent";
@@ -17,7 +17,7 @@ function App() {
 
   const fetchFavorites = async () => {
     setLoading(true);
-    const response = await axios.get("http://localhost:5000/favorites");
+    const response = await axios.get("https://weather-dashboard-4mtz.onrender.com/favorites");
     if (response.data.length !== 0) {
       let initialCity = response.data[0].city;
       await fetchWeather(initialCity);
@@ -38,7 +38,6 @@ function App() {
       console.log("Not Found");
     }
   };
-
   return (
     <div className="main">
       <SearchComponent setCity={setCity} setWeatherData={setWeatherData} />
